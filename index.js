@@ -84,6 +84,7 @@ splinky.views([
 ])
 
 splinky.listen()
+console.log('listening on localhost:' + port);
 
 if (process.env.REDIRECT_PORT) {
   console.log('Starting redirector on port', process.env.REDIRECT_PORT)
