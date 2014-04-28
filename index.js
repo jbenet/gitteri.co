@@ -20,7 +20,7 @@ const path        = require('path')
     , redirector  = require('./lib/redirector')
     , isDev       = (/^dev/i).test(process.env.NODE_ENV)
 
-    , defaultHost = 'nodei.co'
+    , defaultHost = 'gitteri.co'
     , port        = process.env.PORT || 3000
     , sslKeyFile  = path.join(__dirname, 'keys/nodeico.key')
     , sslCertFile = path.join(__dirname, 'keys/comodo-cert.pem')
