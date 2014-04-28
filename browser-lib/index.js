@@ -9,37 +9,37 @@ var $         = require('./ender')
 
   , tmpl = {
         plain: {
-            img  : '<img src="/npm/{pkg}.png">'
-          , code : '<textarea class="copyable" readonly><a href="https://nodei.co/npm/{pkg}/"><img src="https://nodei.co/npm/{pkg}.png"></a></textarea>'
-                 + '<textarea class="copyable" readonly>[![NPM](https://nodei.co/npm/{pkg}.png)](https://nodei.co/npm/{pkg}/)</textarea>'
+            img  : '<img src="/gitter/{pkg}.png">'
+          , code : '<textarea class="copyable" readonly><a href="https://gitteri.co/gitter/{pkg}/"><img src="https://gitteri.co/gitter/{pkg}.png"></a></textarea>'
+                 + '<textarea class="copyable" readonly>[![NPM](https://gitteri.co/gitter/{pkg}.png)](https://gitteri.co/gitter/{pkg}/)</textarea>'
         }
       , downloads: {
-            img  : '<img src="/npm/{pkg}.png?downloads=true">'
-          , code : '<textarea class="copyable" readonly><a href="https://nodei.co/npm/{pkg}/"><img src="https://nodei.co/npm/{pkg}.png?downloads=true"></a></textarea>'
-                 + '<textarea class="copyable" readonly>[![NPM](https://nodei.co/npm/{pkg}.png?downloads=true)](https://nodei.co/npm/{pkg}/)</textarea>'
+            img  : '<img src="/gitter/{pkg}.png?downloads=true">'
+          , code : '<textarea class="copyable" readonly><a href="https://gitteri.co/gitter/{pkg}/"><img src="https://gitteri.co/gitter/{pkg}.png?downloads=true"></a></textarea>'
+                 + '<textarea class="copyable" readonly>[![NPM](https://gitteri.co/gitter/{pkg}.png?downloads=true)](https://gitteri.co/gitter/{pkg}/)</textarea>'
         }
       , 'downloads-stars': {
-            img  : '<img src="/npm/{pkg}.png?downloads=true&stars=true">'
-          , code : '<textarea class="copyable" readonly><a href="https://nodei.co/npm/{pkg}/"><img src="https://nodei.co/npm/{pkg}.png?downloads=true&stars=true"></a></textarea>'
-                 + '<textarea class="copyable" readonly>[![NPM](https://nodei.co/npm/{pkg}.png?downloads=true&stars=true)](https://nodei.co/npm/{pkg}/)</textarea>'
+            img  : '<img src="/gitter/{pkg}.png?downloads=true&stars=true">'
+          , code : '<textarea class="copyable" readonly><a href="https://gitteri.co/gitter/{pkg}/"><img src="https://gitteri.co/gitter/{pkg}.png?downloads=true&stars=true"></a></textarea>'
+                 + '<textarea class="copyable" readonly>[![NPM](https://gitteri.co/gitter/{pkg}.png?downloads=true&stars=true)](https://gitteri.co/gitter/{pkg}/)</textarea>'
         }
       , compact: {
-            img  : '<img src="/npm/{pkg}.png?compact=true">'
-          , code : '<textarea class="copyable" readonly><a href="https://nodei.co/npm/{pkg}/"><img src="https://nodei.co/npm/{pkg}.png?compact=true"></a></textarea>'
-                 + '<textarea class="copyable" readonly>[![NPM](https://nodei.co/npm/{pkg}.png?compact=true)](https://nodei.co/npm/{pkg}/)</textarea>'
+            img  : '<img src="/gitter/{pkg}.png?compact=true">'
+          , code : '<textarea class="copyable" readonly><a href="https://gitteri.co/gitter/{pkg}/"><img src="https://gitteri.co/gitter/{pkg}.png?compact=true"></a></textarea>'
+                 + '<textarea class="copyable" readonly>[![NPM](https://gitteri.co/gitter/{pkg}.png?compact=true)](https://gitteri.co/gitter/{pkg}/)</textarea>'
         }
       , mini: {
-            img  : '<img src="/npm/{pkg}.png?mini=true">'
-          , code : '<textarea class="copyable" readonly><a href="https://nodei.co/npm/{pkg}/"><img src="https://nodei.co/npm/{pkg}.png?mini=true"></a></textarea>'
-                 + '<textarea class="copyable" readonly>[![NPM](https://nodei.co/npm/{pkg}.png?mini=true)](https://nodei.co/npm/{pkg}/)</textarea>'
+            img  : '<img src="/gitter/{pkg}.png?mini=true">'
+          , code : '<textarea class="copyable" readonly><a href="https://gitteri.co/gitter/{pkg}/"><img src="https://gitteri.co/gitter/{pkg}.png?mini=true"></a></textarea>'
+                 + '<textarea class="copyable" readonly>[![NPM](https://gitteri.co/gitter/{pkg}.png?mini=true)](https://gitteri.co/gitter/{pkg}/)</textarea>'
         }
       , dl: {
             img   : '<img src="/npm-dl/{pkg}.png">'
           , imgM  : '<img src="/npm-dl/{pkg}.png?months={months}">'
-          , code  : '<textarea class="copyable" readonly><a href="https://nodei.co/npm/{pkg}/"><img src="https://nodei.co/npm-dl/{pkg}.png"></a></textarea>'
-                  + '<textarea class="copyable" readonly>[![NPM](https://nodei.co/npm-dl/{pkg}.png)](https://nodei.co/npm/{pkg}/)</textarea>'
-          , codeM : '<textarea class="copyable" readonly><a href="https://nodei.co/npm/{pkg}/"><img src="https://nodei.co/npm-dl/{pkg}.png?months={months}"></a></textarea>'
-                  + '<textarea class="copyable" readonly>[![NPM](https://nodei.co/npm-dl/{pkg}.png?months={months})](https://nodei.co/npm/{pkg}/)</textarea>'
+          , code  : '<textarea class="copyable" readonly><a href="https://gitteri.co/gitter/{pkg}/"><img src="https://gitteri.co/npm-dl/{pkg}.png"></a></textarea>'
+                  + '<textarea class="copyable" readonly>[![NPM](https://gitteri.co/npm-dl/{pkg}.png)](https://gitteri.co/gitter/{pkg}/)</textarea>'
+          , codeM : '<textarea class="copyable" readonly><a href="https://gitteri.co/gitter/{pkg}/"><img src="https://gitteri.co/npm-dl/{pkg}.png?months={months}"></a></textarea>'
+                  + '<textarea class="copyable" readonly>[![NPM](https://gitteri.co/npm-dl/{pkg}.png?months={months})](https://gitteri.co/gitter/{pkg}/)</textarea>'
         }
     }
 
@@ -49,7 +49,7 @@ function tmplpkg (tmpl, pkg, months) {
 
 function packageExists (pkg, callback) {
   $.ajax({
-      url: '/npm/' + pkg + '.json'
+      url: '/gitter/' + pkg + '.json'
     , type: 'json'
     , method: 'get'
     , error: function () {
