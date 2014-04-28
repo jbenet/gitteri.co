@@ -1,4 +1,6 @@
-[nodei.co](https://nodei.co)
-============================
+[gitteri.co](https://gitteri.co)
+================================
 
-**Node.js badges, that's all**
+**Gitter.im badges, that's all**
+
+Forked from https://github.com/rvagg/nodei.co
